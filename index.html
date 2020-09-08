@@ -1,0 +1,16 @@
+<input id="radial-1" value="100" type="range" min="-50" max="150">
+<link rel="stylesheet" href="style.css">
+<div>
+  <input id="radial-2" value="100" type="range" min="-50" max="150" style="-webkit-appearance: slider-vertical;transform: rotate(.5turn);" orient="vertical">
+  <div class="demo"></div>
+  <input id="radial-3" value="0" type="range" min="-50" max="150" style="-webkit-appearance: slider-vertical; transform: rotate(.5turn);" orient="vertical">
+  <script>
+  document
+    .querySelectorAll('input')
+    .forEach(input => 
+    {
+      input.addEventListener('input', e => document.body.style.setProperty('--' + e.target.id, e.target.value + '%'))
+    })
+  </script>
+</div>
+<input id="radial-4" value="0" type="range" min="-50" max="150">

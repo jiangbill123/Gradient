@@ -1,0 +1,40 @@
+.demo {
+    inline-size: 75vmin;
+    block-size: 75vmin;
+    border-radius: 1ch;
+    
+    --cyanHSL: 180 100% 50%;
+    --pinkHSL: 328 100% 54%;
+    
+    background-color: rebeccapurple;
+    background-image: 
+      radial-gradient(
+        circle at var(--radial-1, 100%) var(--radial-3, 0%), 
+        hsl(var(--cyanHSL)), hsl(var(--cyanHSL) / 0%)
+      ),
+      radial-gradient(
+        circle at var(--radial-4, 0%) var(--radial-2, 100%), 
+        hsl(var(--pinkHSL)), hsl(var(--pinkHSL) / 0%)
+      )
+    ; 
+  }
+  
+  div {
+    display: grid;
+    grid: 1fr / min-content 1fr min-content;
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui;
+  }
